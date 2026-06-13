@@ -1,0 +1,12 @@
+services:
+  hub-app:
+    build:
+      context: .
+      args:
+        - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
+    container_name: hub-app
+    restart: unless-stopped
+    env_file:
+      - .env.local
+    ports:
+      - "3010:3000"
