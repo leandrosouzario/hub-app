@@ -1,0 +1,12 @@
+---
+description: Convenções do hub-app — vitrine pública Next.js
+alwaysApply: true
+---
+
+# Hub App
+
+- Catálogo: editar apenas `lib/apps.js`.
+- JavaScript + JSX; sem TypeScript sem pedido explícito.
+- Sem Supabase, API routes, middleware de auth ou backend.
+- Não alterar repos irmãos; apenas links em `url`.
+- Porta local: **3010**.
