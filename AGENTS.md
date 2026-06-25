@@ -33,6 +33,7 @@ Apps irmãs (URLs de produção):
 |-----|-----|
 | Painel Corporativo | `https://pc.leandrosouza.info` |
 | Gym App | `https://gym.leandrosouza.info` |
+| Balcão Corporativo | `https://balcao.leandrosouza.info` |
 
 ## Convenções
 
