@@ -6,27 +6,9 @@ Hub público de aplicações web. Vitrine de projetos desenvolvidos ou planejado
 
 ## Pré-requisitos
 
-- Node.js 18+
-- npm
+- Docker e Docker Compose
 
-## Desenvolvimento local
-
-```bash
-cd /home/leandro/projetos/hub-app
-npm install
-npm run dev
-```
-
-Abra [http://localhost:3010](http://localhost:3010).
-
-## Build de produção
-
-```bash
-npm run build
-npm start
-```
-
-## Docker
+## Build e execução (Docker)
 
 1. Crie `.env.local` (opcional):
 
@@ -42,6 +24,29 @@ docker compose up -d
 ```
 
 A aplicação ficará disponível na porta **3010** do host.
+
+## Ícones PWA (iPhone / Tela de Início)
+
+Os PNGs são gerados automaticamente no **build Docker** a partir de `public/icons/icon.svg` (`npm run icons` no Dockerfile). Não é necessário `npm install` na máquina host.
+
+Para alterar o ícone, edite o SVG e rebuild:
+
+```bash
+docker compose build --no-cache
+docker compose up -d
+```
+
+## Desenvolvimento local (opcional)
+
+Requer Node.js 18+ instalado na máquina:
+
+```bash
+cd /home/leandro/projetos/hub-app
+npm install
+npm run dev
+```
+
+Abra [http://localhost:3010](http://localhost:3010).
 
 ## Cloudflare Tunnel
 
@@ -59,6 +64,7 @@ hub-app/
 ├── app/              # Páginas Next.js
 ├── components/       # Seções da homepage
 ├── lib/apps.js       # Dados dos cards e stack
+├── public/icons/     # icon.svg + PNGs gerados no build
 ├── Dockerfile
 └── docker-compose.yml
 ```

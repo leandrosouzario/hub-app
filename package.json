@@ -7,7 +7,8 @@
     "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "icons": "node scripts/generate-icons.mjs"
   },
   "dependencies": {
     "next": "^16.2.7",
@@ -15,6 +16,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.50.0",
     "eslint-config-next": "^14.0.0",
